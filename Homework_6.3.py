@@ -16,7 +16,7 @@ from functools import reduce
 
 def multiply_digits(user_number):
     while user_number > 9:
-        user_number = reduce(lambda x, y: x * y, map(int, str(user_number)))
+        user_number = reduce(lambda first_digit, second_digit: first_digit * second_digit, map(int, str(user_number)))
     return user_number
 
 
